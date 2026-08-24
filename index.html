@@ -4,28 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GUESS NUMBER</title>
-    <link rel = "stylesheet" href = "style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>GUESSING GAME</h1>
 
-    <div class = "game">
-        <p class = "info">Guess the number between 1 to 100.</p>
-        <p class = "info">You have 10 attempts to guess.</p>
+    <div class="container-wrapper">
+        
+        <div class="game">
+            <h1>GUESSING GAME</h1>
+            
+            <p class="info">Guess the number between 1 to 100.</p>
+            <p class="info">You have 10 attempts to guess.</p>
 
-        <div class = "guess-info">GUESS A NUMBER</div>
-        <input type = "number" class = "player" id = "guess" placeholder = "Enter a Number">
+            <div class="mystery-box" id="mystery-display">?</div>
 
-        <button id = "guessing">GUESS</button>
+            <div class="guess-info">GUESS A NUMBER</div>
+            <input type="number" class="player" id="guess" placeholder="Enter a Number">
 
-        <pre class = "attempts-info">Previous Guess : <span id = "prev-guess">None</span></pre>
-        <pre class = "attempts-info">Attempts left : <span id = "attempts-left">10</span></pre>
+            <button id="guessing">GUESS</button>
 
-        <p class = "result"></p>
+            <p class="attempts-info">Previous Guess : <span id="prev-guess">None</span></p>
+            <p class="attempts-info">Attempts left : <span id="attempts-left">10</span></p>
 
-        <button id = "play-again">PLAY AGAIN</button>
+            <p class="result"></p>
+
+            <button id="play-again">PLAY AGAIN</button>
+        </div>
+        
     </div>
 
-    <script src = "guessScript.js"></script>
+    <script src="guessScript.js"></script>
 </body>
 </html>
