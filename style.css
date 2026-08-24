@@ -1,95 +1,130 @@
-*{
-    background-color : rgb(14, 59, 44);
-}
-
-h1{
-    color : rgb(180, 165, 36);
-    text-align : center;
-}
-
-.game{
-    display : flex;
-    flex-direction : column;
-    background-color : rgb(190, 202, 169);
-    height : 650px;
-    margin-left : auto 30px;
-    align-items : center;
-}
-
-.info{
-    background-color :  rgb(190, 202, 169);
-    color :rgb(14, 59, 44);
-    margin-top : 0px;
-    margin-bottom : 0px;
-    text-align : center;
-    font-family :'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-.guess-info{
-    background-color : rgb(190, 202, 169);
-    font-family :Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin-top : 50px;
-    font-size : 35px;
-    color : rgb(14, 59, 44);
-    text-align : center;
-}
-
-#guess{
-    margin-top : 15px;
-    height : 40px;
-    width : 200px;
-    border-radius : 10px;
-    color : white;
-    border : 2px solid goldenrod;
-    text-align : center;
-}
-
-#guessing{
-    margin-top : 20px;
-    height : 40px;
-    width : 150px;
-    border-radius : 10px;
-    color : rgb(180, 165, 36);
-    font-size : 20px;
-    background-color :rgb(14, 59, 44);
-    margin-bottom : 40px;
-    transition : transform 2s ease;
-    border : 2px solid black;
-}
-
-#guessing:hover{
-    transform : scale(1.2);
-}
-
-.attempts-info{
-    background-color : rgb(190, 202, 169);
-    margin-top : 0px;
-    margin-bottom : 5px;
-}
-
-#prev-guess,
-#attempts-left{
-    background-color : rgb(190, 202, 169);
-}
-
-.result{
-    background-color : rgb(190, 202, 169);
-    font-size : 50px;
-    color : orange;
-}
-
-#play-again{
-    display : none;
-    margin-top : 75px;
-    height : 40px;
-    width : 150px;
-    border-radius : 10px;
-    border : 2px solid black;
-    background-color : green;
-}
-
-#guess::-webkit-inner-spin-button,
-#guess::-webkit-outer-spin-button {
-    -webkit-appearance: none;
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0f2b1d 0%, #1a4a32 100%);
+    padding: 20px;
+}
+
+.game {
+    background: #e6edd9;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    border: 3px solid #1a4a32;
+}
+
+h1 {
+    color: #1a4a32;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.info {
+    color: #333;
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+}
+
+.mystery-box {
+    width: 120px;
+    height: 120px;
+    background: #1a4a32;
+    color: #f7ca44;  
+    font-size: 4rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    margin: 25px auto;
+    box-shadow: inset 0 0 15px rgba(0,0,0,0.3), 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.guess-info {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #1a4a32;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #1a4a32;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    text-align: center;
+    outline: none;
+    background: #f4f8f0;
+    margin-bottom: 15px;
+}
+
+#guessing {
+    width: 100%;
+    padding: 12px;
+    background: #1a4a32;
+    color: #e6edd9;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    margin-bottom: 20px;
+}
+
+#guessing:hover {
+    background: #256645;
+}
+
+#guessing:active {
+    transform: scale(0.98);
+}
+
+.attempts-info {
+    font-size: 1rem;
+    color: #222;
+    margin: 6px 0;
+    font-weight: 500;
+}
+
+.attempts-info span {
+    font-weight: bold;
+    color: #1a4a32;
+}
+
+.result {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 15px 0;
+    color: #1a4a32;
+}
+
+#play-again {
+    padding: 8px 20px;
+    background: transparent;
+    color: #1a4a32;
+    border: 2px solid #1a4a32;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#play-again:hover {
+    background: rgba(26, 74, 50, 0.1);
 }
