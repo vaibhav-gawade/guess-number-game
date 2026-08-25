@@ -89,3 +89,10 @@ playAgain.addEventListener('click',function(e){
     mysteryBox.style.color = "#FFDD35";
     mysteryBox.style.boxShadow = "inset 0 0 15px rgba(0,0,0,0.5), 0 5px 20px rgba(189, 52, 254, 0.5)";
 });
+
+guess.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') {
+        e.preventDefault(); 
+        button.click();     
+    }
+});
